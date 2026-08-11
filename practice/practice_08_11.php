@@ -1,7 +1,7 @@
 <?php
 // 配列の内容を分かりやすく参照できる関数
-$arr = ["apple","orange","banana"];
-$arr[] = "peach"; // 末尾に値を追加する書き方
+$arr = ['apple', 'orange', 'banana'];
+$arr[] = 'peach'; // 末尾に値を追加する書き方
 print_r($arr);
 /*
 出力：
@@ -19,18 +19,12 @@ $player = [
     11 => 'Neymar',
     7 => 'CR7',
 ];
-dump($player[10]); // 出力：Messi
 
 // 多次元配列
-$cell=[
-    ['x-1','x-2','x-3'],
-    ['y-1','y-2','y-3'],
-    ['z-1','z-2','z-3'],
-];
-dump($cell[1][2]); // 出力：y-3
+$cell = [['x-1', 'x-2', 'x-3'], ['y-1', 'y-2', 'y-3'], ['z-1', 'z-2', 'z-3']];
 
 // 組み合わせもできる
-$teamPlayer=[
+$teamPlayer = [
     'FCB' => [
         10 => 'Messi',
         11 => 'Neymar',
@@ -40,11 +34,10 @@ $teamPlayer=[
         10 => 'Neymar',
     ],
 ];
-dump($teamPlayer['FCB'][11]); // 出力：Neymar
 
 // 型のキャスト
-$hoge = (string)15; // string型の15に変換される
-$moge = (int)'20'; // int型の20に変換される
+$hoge = (string) 15; // string型の15に変換される
+$moge = (int) '20'; // int型の20に変換される
 /*
 他にも以下のようなものがある
 (bool) / (boolean)：論理型への変換
@@ -60,14 +53,14 @@ $y = $x--;
 
 // 配列の結合
 $color = [
-    red => 'apple',
-    green => 'muscat',
-    blue => 'sea',
+    'red' => 'apple',
+    'green' => 'muscat',
+    'blue' => 'sea',
 ];
 $color2 = [
-    red => 'tomato',
-    blue => 'sky',
-    yellow => 'banana',
+    'red' => 'tomato',
+    'blue' => 'sky',
+    'yellow' => 'banana',
 ];
 $newColor = $color + $color2;
 print_r($newColor);
@@ -87,7 +80,6 @@ yellow => banana
 // .= (文字列結合)
 $str1 = 'ペップ';
 $str1 .= 'グアルディオラ';
-dump($str1); // 出力：ペップグアルディオラ
 
 // ??= (null演算子)
 // 左辺がnullの場合は、右辺を代入する
@@ -95,6 +87,11 @@ $num1 = 10;
 $num2 = null;
 $num1 ??= 30;
 $num2 ??= '左辺はnullです';
-dump("{$num1},{$num2}"); // 出力：10,左辺はnullです
 
 // 連想配列の分割代入
+$map = [
+    'title' => '独習PHP',
+    'price' => 3000,
+];
+// 以下のように、キー=>変数で分割代入することで連想配列から特定の値を取り出せる
+['title' => $title, 'price' => $price] = $map;

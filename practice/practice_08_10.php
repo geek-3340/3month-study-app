@@ -6,7 +6,6 @@ $msg = 'hello';
 // 可変変数（動的に変数を呼び出せる）
 $x = 'title';
 $title = 'これはタイトルです';
-dump(${$x}); // 出力：これはタイトルです
 
 // 定数（２通りの宣言方法）
 const FULL_NAME = 'レオン・S・ケネディ';
@@ -35,30 +34,14 @@ class obj
 }
 $object = new obj();
 $null = null;
-dump("出力：{$str2},{$str3},{$array[0]},{$object->NAME}");
 
-// 真偽値がfalseとなる値
-if (false) {
-    dump('実行されない');
-} else {
-    dump('実行');
-}
-if (0) {
-    dump('実行されない');
-} else {
-    dump('実行');
-}
-$emptyArr = [];
-if ($emptyArr) {
-    dump('実行されない');
-} else {
-    dump('実行');
-}
-if (null) {
-    dump('実行されない');
-} else {
-    dump('実行');
-}
+/*
+真偽値がfalseとなる値
+(int)0
+(bool)false
+(array)[] ※空配列
+(null)null
+*/
 
 // ヒアドキュメント
 $msg = <<<EOD
@@ -66,5 +49,3 @@ $msg = <<<EOD
 長い長い
 文字列です。
 EOD;
-dump($msg);
-
