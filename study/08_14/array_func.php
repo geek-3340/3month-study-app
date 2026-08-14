@@ -89,10 +89,22 @@ Array(
 
 // array_splice：配列に複数要素を追加・置換・削除
 $arr=['山田','田中','佐藤'];
-$result=array_splice($arr,1,2,['後藤','池田']);
-print_r($result);
+print_r(array_splice($arr,1,2,['後藤','池田'])); // [1]の要素から、2つ削除、置き換え
 print_r($arr);
 
-$result=array_splice($arr,-2,-1,'田中');
-print_r($result);
+$arr=['山田','田中','佐藤'];
+print_r(array_splice($arr,-2,-1,['後藤'])); // 末尾から2つめ（末尾が0ではなく1）をスタートとし、末尾から1つ残して削除、置き換え
 print_r($arr);
+
+$arr=['山田','田中','佐藤'];
+print_r(array_splice($arr,1)); // [1]の要素から後ろを全て削除
+print_r($arr);
+
+$arr=['山田','田中','佐藤'];
+print_r(array_splice($arr,2,0,['池田','後藤'])); // 削除無し、[2]の要素の前に追加
+print_r($arr);
+
+// array_slice()：配列から特定の範囲を取得
+$arr=['りんご','オレンジ','ぶどう'];
+print_r(array_slice($arr,1,2,true)); // 指定方法はsplice同様、default=falseでtrueはキー保持
+
