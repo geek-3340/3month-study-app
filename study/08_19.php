@@ -41,9 +41,17 @@ $hoge->sayHoge();
 DateTimeクラス
 日付/時刻の演算や整形をするためのクラス
 */
+// 引数を空、または第一を「'now'」第ニをDateTimeZoneインスタンスとすることで
+// 現在の日時を生成できる
 $now = new DateTime('now', new DateTimeZone('Asia/Tokyo'));
-print $now->format('yy/m/d h:m:s');
+print $now->format('yy/m/d h:m:s'); // 結果：（例）26/11/1 5:10:25
 
-/*
-Composerについて
-*/
+// 日付、時刻を指定することも可能
+$now = new DateTime('2025/12/31 5:55:55');
+print $now->format('Y年m月d日H時i分');
+
+// 日付、時刻を個別に指定
+$now = new DateTime();
+$now->setDate(2021,10,25);
+$now->setTime(21,0,0);
+print $now->format('Y年m月d日H時i分');
