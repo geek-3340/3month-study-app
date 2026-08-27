@@ -8,7 +8,7 @@
 </head>
 
 <body>
-  <?php include './study/08_26.php'; ?>
+  <?php include './study/08_27/namespace.php'; ?>
 </body>
 
 </html>
