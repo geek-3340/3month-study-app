@@ -4,7 +4,7 @@ namespace study_app\study\namespace;
 
 use study_app\study\MyClass\MyClass;
 
-require_once './study/08_27/my_class.php';
+require_once 'Autoloader.php';
 
 print MyClass::showClass();
 
