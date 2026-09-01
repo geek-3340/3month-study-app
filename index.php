@@ -8,7 +8,7 @@
 </head>
 
 <body>
-  <?php include './study/08_31/form.php'; ?>
+  <?php include './study/09_01/form.php'; ?>
 </body>
 
 </html>

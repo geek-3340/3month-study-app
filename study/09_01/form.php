@@ -8,26 +8,19 @@
 </head>
 
 <body>
-    <form action="./post.php">
+    <form action="./study/09_01/post.php" method="POST">
         <div>
             <label>
-                name<br>
-                <input type="text" name="name" required>
+                タイトル<br>
+                <input type="text" name="title" required>
             </label>
         </div>
         <div>
             <label>
-                mail<br>
-                <input type="text" name="mail" required>
+                本文<br>
+                <textarea name="article"></textarea>
             </label>
         </div>
-        <div>
-            <label>
-                password<br>
-                <input type="password" name="password" required>
-            </label>
-        </div>
-        <br>
         <button type="submit">登録</button>
     </form>
 </body>
