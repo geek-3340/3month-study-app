@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <form action="./study/09_01/post.php" method="POST">
+    <form action="./post.php" method="POST">
         <div>
             <label>
                 タイトル<br>
@@ -23,6 +23,8 @@
         </div>
         <button type="submit">登録</button>
     </form>
+    <br>
+    <a href="../../index.php">記事一覧へ</a>
 </body>
 
 </html>
